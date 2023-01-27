@@ -2443,37 +2443,10 @@
     
                     </div>
                 </div>
-            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HGB7sDKOh1Ejkv-hnOS7juu6z0pS5_Ce5XcqlyTMVxWfVFHKlteruBZ-2E0X8mWr6N1jxK3PZqXuR7Rq9i6UvTWnhERX8--JyylkPNSmNCh92VymFnxrGGsM017PGS1x8z2yZa5EuuB7wvRgPUupTI"></form>
+            <input name="" type="hidden" ></form>
         
     </div>
 
-<script type="text/javascript">
-    $(document).on('click', '#btnDeleteItem', function () {
-        jQuery(this).closest('td').find('[type=checkbox]').prop('checked', true);
-        $('#update-cart-button').click();
-    });
-
-
-    function Quick_buy_details(urladd) {
-        debugger;
-        $.ajax({
-            url: urladd,
-            type: 'GET',
-            contentType: 'application/json; charset=utf-8',
-
-        }).done(function (data) {
-            $('#modelContent').html(data);
-            $('.modale').addClass('opened');
-            this.success_process
-
-
-        }).fail(function () {
-            console.log("oh no")
-            this.ajaxFailure
-        });
-    }
-
-</script>
 
     </div>
 </div>
