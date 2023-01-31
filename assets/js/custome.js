@@ -406,7 +406,33 @@ jQuery(document).ready(function ($) {
 
 }); // doc ready
 
-
+                                          $("#success-alert").hide();
+                                          $("#success-alertSpecifications").hide();
+                                    
+                                        $(function () {
+                                            $("ul.nav-tabs li:first").addClass("active");
+                                            $(".tab-content .tab-pane:first").addClass("active");
+                                        });
+                                    
+                                    
+                                       function copyToClipboard(element,alertTxt) {
+                                          var $temp = $("<input>");
+                                          $("body").append($temp);
+                                          $temp.val($(element).text()).select();
+                                          document.execCommand("copy");
+                                           $temp.remove();
+                                           showAlert();
+                                        }
+                                    
+                                        function showAlert() {
+                                            $("#success-alert").fadeTo(1500, 500).slideUp(500, function () {
+                                                $("#success-alert").slideUp(500);
+                                            });
+                                            $("#success-alertSpecifications").fadeTo(1500, 500).slideUp(500, function () {
+                                                $("#success-alertSpecifications").slideUp(500);
+                                            });
+                                            
+                                        }
 
 
 

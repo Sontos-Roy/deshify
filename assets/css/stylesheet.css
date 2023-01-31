@@ -6518,3 +6518,12 @@ div.upload-image-button input[type="file"] {
 #fb-root .fb_dialog_content iframe {
     bottom: 70px !important;
 }
+
+.overview-buttons{
+    font-size: 20px;
+}
+.overview-buttons .btn{
+    border: 1px solid rgb(83, 83, 83);
+    padding: 10px 15px;
+    margin-right: 10px;
+}

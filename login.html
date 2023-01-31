@@ -1925,707 +1925,274 @@
         </div>
 
     <div id="master-wrapper-content" class="master-wrapper-content">
-        <div class="breadcrumb_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        
-                        <div class="breadcrumb">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Home">Home</a>
-                                    <span class="delimiter">/</span>
-                                </li>
-                                    <li>
-                                            <strong class="current-item">Catagories</strong>
-                                    </li>
-                            </ul>
-                        </div>
         
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="master-column-wrapper">
             <div class="container">
-               <div class="row">
-                  <div class="col-sm-12 center-1">
-                     <div class="page category-page">
-                        <div class="page-body">
-                           <div class="category-grid sub-category-grid">
-                              <div class="item-grid">
-                                 <div class="item-box">
-                                    <div class="sub-category-item">
-                                       <div class="picture">
-                                          <a href="#" title="Women&#x27;s Watches ">
-                                          <img alt="Women&#x27;s Watches" src="https://www.deshify.com/images/thumbs/default-image_450.png" title="Women&#x27;s Watches " />
-                                          </a>
-                                       </div>
-                                       <h2 class="title">
-                                          <a href="#" title="Women&#x27;s Watches">
-                                          Women&#x27;s Watches
-                                          </a>
-                                       </h2>
-                                    </div>
-                                 </div>
-                                 <div class="item-box">
-                                    <div class="sub-category-item">
-                                       <div class="picture">
-                                          <a href="#" title="">
-                                          <img alt="Laptop Table  Kids study Table" src="https://www.deshify.com/images/thumbs/default-image_450.png" title="Laptop Table &amp; Kids study Table" />
-                                          </a>
-                                       </div>
-                                       <h2 class="title">
-                                          <a href="#" title="Laptop Table &amp; Kids study Table ">
-                                          Laptop Table &amp; Kids study Table
-                                          </a>
-                                       </h2>
-                                    </div>
-                                 </div>
-                                 <div class="item-box">
-                                    <div class="sub-category-item">
-                                       <div class="picture">
-                                          <a href="https://www.deshify.com/new-products" title="New Products ">
-                                          <img alt="New Products" src="https://www.deshify.com/images/thumbs/default-image_450.png" title="New Products " />
-                                          </a>
-                                       </div>
-                                       <h2 class="title">
-                                          <a href="https://www.deshify.com/new-products" title="New Products">
-                                          New Products
-                                          </a>
-                                       </h2>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <script type="text/javascript">
-                              $(document).ready(function () {
-                                  $('.sub-category-grid .item-grid').slick({
-                                      speed: 800,
-                                      dots: false,
-                                      autoplay: true,
-                                      infinite: true,
-                                      slidesToShow: 6,
-                                      slidesToScroll: 6,
-                                      autoplaySpeed: 2000,
-                                      responsive: [
-                                          {
-                                              breakpoint: 1200,
-                                              settings: {
-                                                  slidesToShow: 5,
-                                                  slidesToScroll: 5,
-                                              }
-                                          },
-                                          {
-                                              breakpoint: 1001,
-                                              settings: "unslick"
-                                          }
-                                      ]
-                                  });
-                              });
-                           </script>
-                           <div class="section-white">
-                              <div class="product-selectors">
-                                 <div class="product-sorting">
-                                    <select id="products-orderby" name="products-orderby">
-                                       <option selected="selected" value="">Position</option>
-                                       <option value="">Name: A To Z</option>
-                                       <option value="">Name: Z To A</option>
-                                       <option value="">Price: Low To High</option>
-                                       <option value="">Created On</option>
-                                    </select>
-                                 </div>
-                                 <div class="product-viewmode">
-                                    <span>View As</span>
-                                 </div>
-                                 <div class="product-page-size">
-                                    <span>Display</span>
-                                    <select id="products-pagesize" name="products-pagesize" onchange="setLocation(this.value);">
-                                       <option value="#">80</option>
-                                       <option value="#">100</option>
-                                       <option selected="selected" value="#">120</option>
-                                    </select>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-sm-3">
-                                 <div class="section-white">
-                                    <form id="ajaxfilter-form" action="#">
-                                       <div class="ajax-filter-section">
-                                          <div>
-                                             <div id="price-filter-section">
-                                                <script>
-                                                   $(function () {
-                                                   
-                                                       $("#slider-range").slider({
-                                                           range: true,
-                                                           min: 450,
-                                                           max: 2800,
-                                                           values: [450, 2800],
-                                                   
-                                                           slide: function (event, ui) {
-                                                               var currentMin = ui.values[0];
-                                                               var currentMax = ui.values[1];
-                                                               $("#price-current-min").val(currentMin);
-                                                               $("#price-current-max").val(currentMax);
-                                                           },
-                                                           create: function( event, ui ) {
-                                                               if ( (450 == 450 && 2800 == 2800) )
-                                                               {
-                                                                   $(".filter-section .ajaxfilter-clear-price").hide();
-                                                               }
-                                                           },
-                                                           stop: function (event, ui) {
-                                                               var currentMin = ui.values[0];
-                                                               var currentMax = ui.values[1];
-                                                   
-                                                               if (450 == currentMin && 2800 == currentMax)
-                                                               {
-                                                                   $(".filter-section .ajaxfilter-clear-price").hide();
-                                                               }
-                                                               else {
-                                                                   $(".filter-section .ajaxfilter-clear-price").show();
-                                                               }
-                                                               AjaxFilter.setFilter('p');
-                                                           }
-                                                       });
-                                                       $("#price-current-min").val(450);
-                                                       $("#price-current-max").val(2800);
-                                                   
-                                                   
-                                                       $('.ajaxfilter-clear-price').click(function (e) {
-                                                           $("#price-current-min").val(450);
-                                                           $("#price-current-max").val(2800);
-                                                   
-                                                           $("#slider-range").slider("values", 0,450);
-                                                           $("#slider-range").slider("values", 1,2800);
-                                                           AjaxFilter.setFilter('p');
-                                                       });
-                                                   
-                                                   });
-                                                   
-                                                   
-                                                </script>
-                                                <div class="filter-section">
-                                                   <div class="title">
-                                                      <span class="ajaxfilter-title" style="float:left">Filter By Price</span>
-                                                      <a class="ajaxfilter-clear-price" style="float:right;">Remove</a>
-                                                   </div>
-                                                   <div class="clear"></div>
-                                                   <div class="ajaxfilter-section">
-                                                      <input type="hidden" value="BDT" id="currency-symbol" name="" />
-                                                      <div class="ajaxfilter-price-range-section">
-                                                         <div class="price-min" style="float: left">
-                                                            <span>plugin.widgets.productfilter.pricerangefilter.min:</span>
-                                                            <span class="price-range-min">BDT450</span>
-                                                         </div>
-                                                         <div class="price-max" style="float: right">
-                                                            <span>plugin.widgets.productfilter.pricerangefilter.max:</span>
-                                                            <span class="price-range-max">BDT2800</span>
-                                                         </div>
-                                                      </div>
-                                                      <div id="slider-range">
-                                                         <input type="hidden" value="450" id="min-price" />
-                                                         <input type="hidden" value="2800" id="max-price" />
-                                                      </div>
-                                                      <div class="ajaxfilter-price-section">
-                                                         <div class="ajaxfilter-price-section">
-                                                            <input type="text" value="450"
-                                                               readonly id="price-current-min" name="" />
-                                                            <input type="text" value="2800"
-                                                               readonly id="price-current-max" name="" />
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div>
-                                             <div id="specification-filter-section">
-                                                <div class="specification-section">
-                                                   <div class="filter-section">
-                                                      <div class="title">
-                                                         <span class="ajaxfilter-title" style="float:left">Brand Name</span>
-                                                      </div>
-                                                      <div class="ajaxfilter-section">
-                                                         <ul>
-                                                            <li>
-                                                               <input type="checkbox" name="" value="821" />
-                                                            </li>
-                                                            <li>
-                                                               <input type="checkbox" name="" value="823"/>
-                                                               <label for="">SKMEI</label>
-                                                            </li>
-                                                         </ul>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </form>
-                                 </div>
-                              </div>
-                              <div class="col-sm-9">
-                                 <div class="product-grid">
-                                    <div class="item-grid grid_4">
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="item-box">
-                                          <div class="product-item">
-                                             <div class="picture">
-                                                <div class="discount-info">
-                                                   60% off
-                                                </div>
-                                                <a href="product.html" title="Show details for Electric Egg Beater Or Mixer">
-                                                <img alt="Picture of Electric Egg Beater Or Mixer" src="images/thumbs/0000348_electric-egg-beater-or-mixer_415.jpg" title="Show details for Electric Egg Beater Or Mixer" />
-                                                </a>
-                                             </div>
-                                             <div class="details">
-                                                <h2 class="product-title">
-                                                   <a href="product.html">Electric
-                                                   Egg Beater Or Mixer</a>
-                                                </h2>
-                                                <div class="add-info">
-                                                   <div class="prices">
-                                                      <div class="register-prices">
-                                                         <span class="price actual-price">৳ 720</span>
-                                                         <span class="price old-price">&#x9F3;
-                                                         1,800</span>
-                                                      </div>
-                                                      <div class="rating-wrapper">
-                                                         <div class="product-rating-box"
-                                                            title="0 review(s)">
-                                                            <div class="rating">
-                                                               <div style="width: 0%">
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <span class="prime_icon">
-                                                         <img src="assets/images/prime_logo.png" alt="">
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                   <div class="buttons clearfix">
-                                                      <div class="single_button add-to-cart-btn">
-                                                         <div class="btn btn-default">
-                                                            <div class="button_icon">
-                                                               <i class="fas fa-shopping-cart"></i>
-                                                            </div>
-                                                            <input type="button" value="Order Now" class="button-2 product-box-add-to-cart-button"/> 
-                                                         </div>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-heart"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button"/>
-                                                      </div>
-                                                      <div class="single_button">
-                                                         <div class="button_icon">
-                                                            <i class="fas fa-retweet"></i>
-                                                         </div>
-                                                         <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button"/>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-        
+	<div class="row">
+		<div class="col-sm-12 center-1">
+		    
+		    
+<style>
+    /*.registerpage-footer {
+        text-align: center;
+        margin: auto;
+    }*/
+
+    .loginwithgoogle :hover {
+        background-color: red;
+        color: white;
+    }
+
+    .loginwithgoogle {
+        padding: 13px;
+        padding-right: 56px;
+        background: #d34836;
+        color: white;
+    }
+
+
+    .registerpage-sign-in a {
+        color: cadetblue;
+    }
+
+    .selected-dial-code, .number-validation {
+        font-size: 14px;
+    }
+
+    .intl-tel-input {
+        width: 100%;
+    }
+
+
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Phone").on("keypress keyup blur", function (event) {
+            $(this).val($(this).val().replace('/^([0-9-]{10,12})$/g', ""));
+            if (event.which < 48 || event.which > 57) {
+                event.preventDefault();
+            }
+        });
+
+        $('#register-button').click(function () {
+            $('#divMsg').show();
+        });
+    });
+
+
+    
+</script>
+
+
+
+<div class="bengalwey-logo">&nbsp;</div>
+<div class="external-authentication">
+        <div class="title">- or -</div>
+<div class="facebook-login-block">
+    <div class="buttons">
+        <a class="loginBtn loginBtn--facebook" href="https://www.deshify.com/facebookauthentication/login">
+            Login with Facebook
+        </a>
     </div>
 </div>
+
+    <button  id="googlelogin-button" class="button-1 loginwithgoogle" ><i class="fa fa-google" style=" padding-right: 26px;"></i>Login With Google</button>
+
+</div>
+<div class="page registration-page">
+    <div class="page-body">
+        <form method="post" action="https://www.deshify.com/CustomerLogin">
+            
+            <div class="fieldset">
+                <div class="title">
+                    <strong>Your Personal Details</strong>
+                </div>
+                <div class="form-fields">
+                    <div class="inputs hidden">
+                        <label for="FirstName">Full Name:</label>
+                        <input type="text" data-val="true" data-val-required="Full Name is required." id="FirstName" name="FirstName" value="Unknown" />
+                        <span class="required">*</span>
+                        <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <div class="inputs hidden">
+                        <label for="Email">Email:</label>
+                        <input type="email" data-val="true" data-val-email="Wrong email" data-val-required="Email is required." id="Email" name="Email" value="System.Input.No.Email.replace@deshfy.com" />
+                        <span class="required">*</span>
+                        <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    </div>
+                                    </div>
+            </div>
+                            <div class="fieldset">
+                    <div class="title">
+                        <strong>Your Contact Information</strong>
+                    </div>
+                    <div class="form-fields">
+                            <div class="inputs">
+                                <label for="Phone"> PLEASE ENTER YOUR MOBILE  NUMBER:</label>
+                                <br />
+                                <input type="tel" id="Phone" name="Phone" value="" />
+                                    <span class="required">*</span>
+                                <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                                <div id="valid-msg" class="hide number-validation" style="color: green;margin-top: -30px;margin-bottom:30px;
+    margin-left: -12px;">✓</div>
+                                <div id="error-msg" class="hide number-validation" style="color: red;margin-top: -30px;margin-bottom:30px;
+    margin-left: -12px;">✗</div>
+                            </div>
+                                            </div>
+                </div>
+                            <div class="fieldset">
+                    <div class="title">
+                        <strong>Options</strong>
+                    </div>
+                    <div class="form-fields">
+                                                    <div style="display:none">
+
+                                        <div class="inputs custom-attributes">
+            <label>I am:</label>
+
+        <ul class="option-list">
+                <li>
+                    <input id="customer_attribute_1_1" type="checkbox" name="customer_attribute_1" value="1"  />
+                    <label for="customer_attribute_1_1">Merchant</label>
+                </li>
+                <li>
+                    <input id="customer_attribute_1_2" type="checkbox" name="customer_attribute_1" value="2"  />
+                    <label for="customer_attribute_1_2">Supplier</label>
+                </li>
+                <li>
+                    <input id="customer_attribute_1_12" type="checkbox" name="customer_attribute_1" value="12" checked="checked"  />
+                    <label for="customer_attribute_1_12">Neutral</label>
+                </li>
+        </ul>
+                    </div>
+        <div class="inputs custom-attributes">
+            <label>Apply for:</label>
+
+        <ul class="option-list">
+                <li>
+                    <input id="customer_attribute_3_3" type="checkbox" name="customer_attribute_3" value="3"  />
+                    <label for="customer_attribute_3_3">Merchant</label>
+                </li>
+                <li>
+                    <input id="customer_attribute_3_4" type="checkbox" name="customer_attribute_3" value="4"  />
+                    <label for="customer_attribute_3_4">Supplier</label>
+                </li>
+        </ul>
+                    </div>
+
+                            </div>
+                    </div>
+                </div>
+                        <div class="fieldset">
+
+            </div>
+            <div class="fieldset">
+                <div class="title">
+                    <strong>Your Password</strong>
+                </div>
+                <div class="form-fields hidden">
+
+
+                    <input data-val="true" data-val-length="The password should have at least 6 characters." data-val-length-max="999" data-val-length-min="6" data-val-required="Password is required." id="Password" name="Password" type="hidden" value="123456" />
+                    <input data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="Password" data-val-required="Password is required." id="ConfirmPassword" name="ConfirmPassword" type="hidden" value="123456" />
+
+                                    </div>
+            </div>
+
+
+            <div class="buttons">
+                <input type="submit" id="register-button" class="button-1 register-next-step-button" value="                  LOGIN / SIGN UP              " name="register-button" />
+
+            </div>
+            
+            <div id="divMsg" style="display:none; text-align:center">
+                <img src="https://www.deshify.com/images/loading.gif" />
+            </div>
+
+            <div class="registerpage-footer">
+                <div class="condition-part">
+                    <div>By creating and account, you agree to deshify's </div>
+                    <div>Condition's of use and privacy notice</div>
+                </div>
+            </div>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HGB7sDKOh1Ejkv-hnOS7jvXdV7mfm2KjrXN3SNWhcwTZkFxRWBsYUNKkqe2dvo3Ge9InGqwClxfRuoD04N0hNLZpHVNfir1g-eHeWr2IyZv5ROquunHM-K-IJ-SYXBZqJTt2_SZhnyGwYt5sX7VfgU" /></form>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    function GoogleLogin() {
+        var postData = {};
+        addAntiForgeryToken(postData);
+        $.ajax({
+            url: "/customer/GoogleLogin",
+            type: "POST",
+            data: postData,
+            dataType: "json",
+            success: function (response) {
+                window.location.href = response.redirection_url;
+
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $("#googlelogin-button").click(function () {
+            GoogleLogin();
+        });
+    });
+
+
+</script>
+		    
+		</div>
+	</div>
+</div>
+
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<!-- Google code for Analytics tracking -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-142586099-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
 <div class="footer">
+
     <div class="footer_upper">
         <div class="container">
             <div class="row">
                 <div class="footer-block customer-service customer-service-width">
                     <div class="title">
-                        <strong>Customer service</strong>
+                        <strong>Customer  service</strong>
                         <span class="more-icon"></span>
                     </div>
                     <ul class="list">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Search</a> </li>
-                        <li><a href="#">Shipping & returns</a></li>
-                        <li><a href="#">Complain</a> </li>
-                        <li><a href="#">Product Request</a> </li>
-                        <li><a href="#">FAQS</a></li>
+                            <li><a href="https://www.deshify.com/help-center">Help Center</a></li>
+                        <li><a href="https://www.deshify.com/search">Search</a> </li>
+                        <li><a href="https://www.deshify.com/ShippingInfo">Shipping & returns</a></li>
+                        <li><a href="https://www.deshify.com/complain">Complain</a> </li>
+                        <li><a href="https://www.deshify.com/product-request">Product Request</a> </li>
+                        <li><a href="https://www.deshify.com/frequently-asked-questions">FAQS</a></li>
                     </ul>
                 </div>
                 <div class="footer-block information information-width">
@@ -2634,12 +2201,12 @@
                         <span class="more-icon"></span>
                     </div>
                     <ul class="list">
-                        <li><a href="#">Company Profile</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms and conditions</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Site Map</a></li>
-                        <li><a href="#">Blog</a></li>
+                            <li><a href="https://www.deshify.com/company-profile">Company Profile</a></li>
+                            <li><a href="https://www.deshify.com/privacy-policy">Privacy policy</a></li>
+                        <li><a href="https://www.deshify.com/terms-and-condition">Terms and conditions</a></li>
+                        <li><a href="https://www.deshify.com/contactus">Contact us</a></li>
+                            <li><a href="https://www.deshify.com/sitemap">Site Map</a></li>
+                                                    <li><a href="https://www.deshify.com/blog">Blog</a></li>
                     </ul>
                 </div>
 
@@ -2649,16 +2216,30 @@
                         <span class="more-icon"></span>
                     </div>
                     <ul class="list">
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="https://www.deshify.com/order/history">Orders</a></li>
+                        <li><a href="https://www.deshify.com/wishlist">Wishlist</a></li>
 
-                        <li><a href="#">Shopping cart</a></li>
-                        <li><a href="#">Recently viewed products</a>
-                        </li>
-                        <li><a href="#">Compare products list</a></li>
-                        <li><a href="#">Refer to Earn</a></li>
+                            <li><a href="https://www.deshify.com/cart">Shopping cart</a></li>
+                                                    <li><a href="https://www.deshify.com/recentlyviewedproducts">Recently viewed products</a></li>
+                                                    <li><a href="https://www.deshify.com/compareproducts">Compare products list</a></li>
+                        <li><a href="https://www.deshify.com/customer/referral-commission">Refer to Earn</a></li>
                     </ul>
                 </div>
+                <div class="footer-block customer-service make-moneywidth">
+                    <div class="title">
+                        <strong>Make Money With Us </strong>
+                        <span class="more-icon"></span>
+                    </div>
+                    <ul class="list">
+                        <li><a href="https://www.deshify.com/become-a-merchant">Become a Reseller</a></li>
+                        <li><a href="https://www.deshify.com/become-a-suplier">Become a Seller</a></li>
+                        <li><a href="https://www.deshify.com/customer/referral-commission">Refer to earn</a></li>
+                        <li><a href="https://www.deshify.com/sell-product">Sell On Deshify</a> </li>
+                        <li><a href="https://www.deshify.com/delivery-and-return-policy">Delivery And Return Policy</a> </li>
+                        <li><a href="https://www.deshify.com/how-to-sell">How to sell</a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-block subscribe">
                     <div class="title">
                         <strong>Deals and Offers!</strong>
@@ -2667,35 +2248,37 @@
                     <div class="list">
                         <p>
                             subscribe and be the first to get great deals!
+                            
                         </p>
+                        
+<section class="home_newsletter_box_area">
+    <div class="home_newsletter_box">
+        <div class="newsletter">
+            <div class="title">
+                <span>Newsletter</span>
+            </div>
+            <div class="newsletter-subscribe" id="newsletter-subscribe-block">
+                <div class="newsletter-email">
+                    <input id="newsletter-email" class="newsletter-subscribe-text" placeholder="Enter your email here..." type="email" name="NewsletterEmail" value="" />
+                    <input type="button" value="Subscribe" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button" />
+                </div>
+                <div class="newsletter-validation">
+                    <span id="subscribe-loading-progress" style="display: none;" class="please-wait">Wait...</span>
+                    <span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="newsletter-result" id="newsletter-result-block"></div>
+            
+        </div>
 
-                        <section class="home_newsletter_box_area">
-                            <div class="home_newsletter_box">
-                                <div class="newsletter">
-                                    <div class="title">
-                                        <span>Newsletter</span>
-                                    </div>
-                                    <div class="newsletter-subscribe" id="newsletter-subscribe-block">
-                                        <div class="newsletter-email">
-                                            <input id="newsletter-email" class="newsletter-subscribe-text"
-                                                placeholder="Enter your email here..." type="email"
-                                                name="NewsletterEmail" value="" />
-                                            <input type="button" value="Subscribe" id="newsletter-subscribe-button"
-                                                class="button-1 newsletter-subscribe-button" />
-                                        </div>
-                                        <div class="newsletter-validation">
-                                            <span id="subscribe-loading-progress" style="display: none;"
-                                                class="please-wait">Wait...</span>
-                                            <span class="field-validation-valid" data-valmsg-for="NewsletterEmail"
-                                                data-valmsg-replace="true"></span>
-                                        </div>
-                                    </div>
-                                    <div class="newsletter-result" id="newsletter-result-block"></div> 
-                                </div> 
-                            </div>
-                        </section> 
+        
+    </div>
+</section>
+
+
                     </div>
-                </div> 
+                </div>
+
             </div>
         </div>
     </div>
@@ -2722,8 +2305,7 @@
                             <img src="https://www.deshify.com/Themes/nopTheme/Content/images/bkash.png">
                         </a>
                         <a href="#">
-                            <img class="ssl-commerz"
-                                src="https://www.deshify.com/Themes/nopTheme/Content/images/ssl-commerz-logo.png">
+                            <img class="ssl-commerz" src="https://www.deshify.com/Themes/nopTheme/Content/images/ssl-commerz-logo.png">
                         </a>
                     </div>
                 </div>
@@ -2755,7 +2337,7 @@
                         Customer Support
                     </div>
                     <p class="call">
-                        <a href="tel:+8801844505504"><i class="fas fa-phone"></i> + 88 01844 505 504</a>
+                        <a href="tel:+8801844505504"><i class="fa fa-phone"></i> + 88 01844 505 504</a>
                     </p>
                     <p class="email">
                         Email: <a href="mailto:info@bengalway.com">info@deshify.com</a>
@@ -2779,33 +2361,32 @@
                             <strong>Follow us</strong>
                         </div>
                         <ul class="networks">
-                            <li class="fascebook">
-                                <a href="https://www.facebook.com/deshify/" target="_blank">
-                                    <i class="fas fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="twitter">
-                                <a href="https://twitter.com/DeshifyC" target="_blank">
-                                    <i class="fas fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="rss">
-                                <a href="https://www.deshify.com/news/rss/1">
-                                    <i class="fas fa-rss"></i>
-                                </a>
-                            </li>
-                            <li class="youtube">
-                                <a href="https://www.youtube.com/channel/UCQTdiPCnWr2hlzT4pKz6gqw?view_as=subscriber"
-                                    target="_blank">
-                                    <i class="fas fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li class="google-plus">
-                                <a href="https://plus.google.com/103790401747056514595" target="_blank">
-                                    <i class="fas fa-google-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
+        <li class="facebook">
+            <a href="https://www.facebook.com/deshify/" target="_blank">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+        </li>
+            <li class="twitter">
+            <a href="https://twitter.com/DeshifyC" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+            <li class="rss">
+            <a href="https://www.deshify.com/news/rss/1">
+                <i class="fa fa-rss"></i>
+            </a>
+        </li>
+            <li class="youtube">
+            <a href="https://www.youtube.com/channel/UCQTdiPCnWr2hlzT4pKz6gqw?view_as=subscriber" target="_blank">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </li>
+            <li class="google-plus">
+            <a href="https://plus.google.com/103790401747056514595" target="_blank">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+</ul>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -2817,26 +2398,324 @@
                 </div>
             </div>
         </div>
-    </div> 
-</div> 
-<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-<script src="assets/js/public.common.js" type="text/javascript"></script>
-<script src="assets/js/public.ajaxcart.js" type="text/javascript"></script>
-<script src="assets/js/jquery.slidereveal.min.js"
-    type="text/javascript"></script>
-<script src="assets/js/fm.checkator.jquery.min.js"
-    type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/odometer.min.js" type="text/javascript"></script>
-<script src="assets/js/slick.min.js" type="text/javascript"></script>
-<script src="assets/js/custome.js" type="text/javascript"></script>
-<a href="#" id="scroll" style="display: none;">
-    <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+
+
+    
+</div>
+
+
+
+
+
+
+
+    
+    <script src="https://www.deshify.com/lib/jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/lib/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/lib/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/lib/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/js/public.common.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/js/public.ajaxcart.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/jquery.slidereveal.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/fm.checkator.jquery.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/odometer.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/slick.min.js" type="text/javascript"></script>
+<script src="https://www.deshify.com/Themes/nopTheme/Content/js/custom.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.block .title').click(function () {
+            var e = window, a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            var result = { width: e[a + 'Width'], height: e[a + 'Height'] };
+            if (result.width < 1001) {
+                $(this).siblings('.listbox').slideToggle('slow');
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.footer-block .title').click(function () {
+            $(this).toggleClass('expanded');
+            var e = window, a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            var result = { width: e[a + 'Width'], height: e[a + 'Height'] };
+            if (result.width < 769) {
+                $(this).siblings('.list').slideToggle('slow');
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+                            function newsletter_subscribe(subscribe) {
+                                var subscribeProgress = $("#subscribe-loading-progress");
+                                subscribeProgress.show();
+                                var postData = {
+                                    subscribe: subscribe,
+                                    email: $("#newsletter-email").val()
+                                };
+                                $.ajax({
+                                    cache: false,
+                                    type: "POST",
+                                    url: "/subscribenewsletter",
+                                    data: postData,
+                                    success: function(data) {
+                                        subscribeProgress.hide();
+                                        $("#newsletter-result-block").html(data.Result);
+                                        if (data.Success) {
+                                            $('#newsletter-subscribe-block').hide();
+                                            $('#newsletter-result-block').show();
+                                        } else {
+                                            $('#newsletter-result-block').fadeIn("slow").delay(2000).fadeOut("slow");
+                                        }
+                                    },
+                                    error: function(xhr, ajaxOptions, thrownError) {
+                                        alert('Failed to subscribe.');
+                                        subscribeProgress.hide();
+                                    }
+                                });
+                            }
+
+                            $(document).ready(function () {
+                                $('#newsletter-subscribe-button').click(function () {
+newsletter_subscribe('true');                                });
+                                $("#newsletter-email").keydown(function (event) {
+                                    if (event.keyCode == 13) {
+                                        $("#newsletter-subscribe-button").click();
+                                        return false;
+                                    }
+                                });
+                            });
+            </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#flyout_cart_wrapper").slideReveal({
+                    trigger: $("#topcartlink"),
+                    position: "right",
+                    push: false,
+                    overlay: true,
+                    width: 270,
+                    shown: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        });
+                    },
+                    hidden: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 0,
+                            'visibility': 'hidden'
+                        });
+                    }
+                });
+
+                $('header').on('click', '#topcartlink', function (e) {
+                    e.preventDefault();
+                });
+
+
+                $(document).on('click', '#flyout_cart_wrapper .close, #flyout_cart_wrapper .flyout_cart_wrapper_close_arrow', function () {
+                    $('#flyout_cart_wrapper').slideReveal("hide");
+                });
+
+
+            });
+        </script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                //$(this).siblings('.top-menu.mobile').slideToggle('slow');
+                $(this).toggleClass('cross');
+                $('body').toggleClass('no-scroll');
+                $('.top-menu.mobile').toggleClass('show');
+                $('#mobileMenuOverlay').toggleClass('show');
+                $('ul.ulCog').removeClass('show');
+            });
+            $('#mobileMenuOverlay').click(function () {
+                $('body').toggleClass('no-scroll');
+                $('.top-menu.mobile').toggleClass('show');
+                $('#mobileMenuOverlay').toggleClass('show');
+                $('div.menu-toggle').toggleClass('cross');
+            });
+
+            $('.top-menu.mobile .sublist-toggle').click(function () {
+                $(this).toggleClass('expand');
+                $(this).siblings('.sublist').slideToggle('slow');
+            });
+            $('#mobileCog').click(function () {
+                $(this).siblings('ul.ulCog').toggleClass('show');
+                $('div.menu-toggle').removeClass('cross');
+                $('body').removeClass('no-scroll');
+                $('.top-menu.mobile').removeClass('show');
+                $('#mobileMenuOverlay').removeClass('show');
+            });
+        });
+    </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#flyout_cart_wrapper").slideReveal({
+                    trigger: $("#topcartlink"),
+                    position: "right",
+                    push: false,
+                    overlay: true,
+                    width: 270,
+                    shown: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        });
+                    },
+                    hidden: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 0,
+                            'visibility': 'hidden'
+                        });
+                    }
+                });
+
+                $('header').on('click', '#topcartlink', function (e) {
+                    e.preventDefault();
+                });
+
+
+                $(document).on('click', '#flyout_cart_wrapper .close, #flyout_cart_wrapper .flyout_cart_wrapper_close_arrow', function () {
+                    $('#flyout_cart_wrapper').slideReveal("hide");
+                });
+
+
+            });
+        </script>
+<script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#small-searchterms').autocomplete({
+                                delay: 500,
+                                minLength: 1,
+                                source: '/catalog/searchtermautocomplete',
+                                appendTo: '.search-box',
+                                select: function(event, ui) {
+                                    $("#small-searchterms").val(ui.item.label);
+                                    setLocation(ui.item.producturl);
+                                    return false;
+                                }
+                            })
+                            .data("ui-autocomplete")._renderItem = function(ul, item) {
+                                var t = item.label;
+                                //html encode
+                                t = htmlEncode(t);
+                                return $("<li></li>")
+                                    .data("item.autocomplete", item)
+                                    .append("<a><img src='" + item.productpictureurl + "'><span>" + t + "</span></a>")
+                                    .appendTo(ul);
+                            };
+                    });
+                </script>
+<script type="text/javascript">
+                    $("#small-search-box-form").submit(function(event) {
+                        if ($("#small-searchterms").val() == "") {
+                            alert('Please enter some search keyword');
+                            $("#small-searchterms").focus();
+                            event.preventDefault();
+                        }
+                    });
+                </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#flyout_cart_wrapper").slideReveal({
+                    trigger: $("#topcartlink"),
+                    position: "right",
+                    push: false,
+                    overlay: true,
+                    width: 270,
+                    shown: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        });
+                    },
+                    hidden: function (slider, trigger) {
+                        $('#flyout_cart_wrapper .flyout_cart_wrapper_close_arrow').css({
+                            'opacity': 0,
+                            'visibility': 'hidden'
+                        });
+                    }
+                });
+
+                $('header').on('click', '#topcartlink', function (e) {
+                    e.preventDefault();
+                });
+
+
+                $(document).on('click', '#flyout_cart_wrapper .close, #flyout_cart_wrapper .flyout_cart_wrapper_close_arrow', function () {
+                    $('#flyout_cart_wrapper').slideReveal("hide");
+                });
+
+
+            });
+        </script>
+<script type="text/javascript">
+        AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', '.cart-sub-total');
+    </script>
+
+    <a href="#" id="scroll" style="display: none;">
+        <i class="fa fa-arrow-up"></i>
     </a>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+            var windowWidth = $(window).width();
+            if (windowWidth > 1000) {
+                $('body').css('padding-bottom', $('div.footer').innerHeight() + 10);
+            }
+        });
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="1895552304025470"
+         theme_color="#20cef5">
+    </div>
 </body>
 
-
+<!-- Mirrored from www.deshify.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Jan 2023 07:02:35 GMT -->
 </html>
